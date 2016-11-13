@@ -14,7 +14,7 @@
     <!-- Place favicon.ico in the root directory -->
 
     <link rel="stylesheet" href="./static/build/app.min.css">
-    
+
     {% block css %}{% endblock %}
 
     <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
@@ -26,6 +26,8 @@
     <![endif]-->
 
     {% block body %}
+
+    {% include "includes/navbar.html" %}
 
     <div class="{% block content_class %}content{% endblock content_class %}">
 

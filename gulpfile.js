@@ -91,14 +91,14 @@ gulp.task('scripts', function() {
 });
 
 // Image compression
-gulp.task('images', function(){
+gulp.task('images', function () {
   return gulp.src(sources.images)
     .pipe(imagemin()) // Compresses PNG, JPEG, GIF and SVG images
     .pipe(gulp.dest(paths.build.images))
 });
 
 // Run Flask server
-gulp.task('runServer', function() {
+gulp.task('runServer', function () {
   exec('flask run', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
@@ -106,7 +106,7 @@ gulp.task('runServer', function() {
 });
 
 // Browser sync server for live reload
-gulp.task('browserSync', function() {
+gulp.task('browserSync', function () {
     browserSync.init(
       [paths.css + "/*.css", paths.js + "*.js", paths.templates + '*.html'], {
         proxy:  "localhost:5000"
@@ -114,12 +114,17 @@ gulp.task('browserSync', function() {
 });
 
 // Default task
-gulp.task('default', function() {
+gulp.task('default', function () {
     runSequence(['clean', 'styles', 'scripts', 'images'], 'runServer', 'browserSync');
 });
 
+// Build task
+gulp.task('build', function () {
+  runSequence('clean', 'styles', 'scripts', 'images');
+});
+
 // Watch
-gulp.task('watch', ['default'], function() {
+gulp.task('watch', ['default'], function () {
 
   gulp.watch(paths.sass + '/**/*.scss', ['styles']);
   gulp.watch(paths.js + '/*.js', ['scripts']).on("change", reload);
