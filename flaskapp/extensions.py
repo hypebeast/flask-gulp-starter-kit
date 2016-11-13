@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Extensions module. Each extension is initialized in the app factory function in app.py"""
+"""Extensions module. Each extension is initialized in the app factory function in app.py."""
 from flask_cache import Cache
 from flask_debugtoolbar import DebugToolbarExtension
 from flask_migrate import Migrate

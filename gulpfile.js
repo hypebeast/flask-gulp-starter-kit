@@ -116,11 +116,6 @@ gulp.task('browserSync', function () {
   );
 });
 
-// Build and compile all files
-gulp.task('build', function () {
-  runSequence('clean', 'styles', 'scripts', 'images');
-});
-
 // Watch for file changes
 gulp.task('watch', function () {
   gulp.watch(paths.sass + '/**/*.scss', ['styles']).on('change', reload);
@@ -129,12 +124,20 @@ gulp.task('watch', function () {
   gulp.watch(paths.templates + '/**/*.html').on("change", reload);
 });
 
+// Build and compile all files
+gulp.task('build', function () {
+  runSequence('clean', 'styles', 'scripts', 'images');
+});
+
+// Build all files and watches for changes
+gulp.task('build:watch', ['build', 'watch']);
+
 // Build all files, run the server, start BrowserSync and watch for file changes
 gulp.task('default', function () {
   runSequence('build', 'runServer', 'browserSync', 'watch');
 });
 
-// Build all files, start BrowserSync and watch for file changes (use it when you want to start the server manually)
+// Build all files, start BrowserSync and watch for file changes (use it when you want to start Flask manually)
 gulp.task('dev', function () {
   runSequence('build', 'browserSync', 'watch');
 });
