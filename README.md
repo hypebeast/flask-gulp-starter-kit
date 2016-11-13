@@ -35,7 +35,7 @@ Make sure that the `FLASK_DEBUG` environment variable is unset or set it to `0`,
 ## Credits
 
   * [cookiecutter-flask](https://github.com/sloria/cookiecutter-flask)
-  * [cookiecutter-django](https://github.com/sloria/cookiecutter-flask)
+  * [cookiecutter-django](https://github.com/pydanny/cookiecutter-django)
 
 
 ## License
