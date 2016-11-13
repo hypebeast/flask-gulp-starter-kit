@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="./static/build/app.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dist/css/app.min.css') }}">
 
     {% block css %}{% endblock %}
 
@@ -29,13 +29,14 @@
 
     {% include "includes/navbar.html" %}
 
-    <div class="{% block content_class %}content{% endblock content_class %}">
+    <div class="{% block content_class %}uk-container uk-container-center{% endblock content_class %}">
 
       {% block content %}{% endblock %}
 
     </div><!-- end container -->
 
     <!-- JavaScript at the bottom for fast page loading -->
+    <script src="{{ url_for('static', filename='dist/js/app.min.js') }}"></script>
 
     <!-- Custom Javascript -->
     {% block js %}{% endblock %}

@@ -1,6 +1,6 @@
 env/
 *.pyc
 node_modules/
-flaskapp/static/build
+flaskapp/static/dist
 flaskapp/static/components/*
 !flaskapp/static/components/.gitkeep

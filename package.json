@@ -9,6 +9,7 @@
   "author": "Sebastian Ruml <sebastian@sebastianruml.name>",
   "license": "MIT",
   "devDependencies": {
+    "bower": "^1.8.0",
     "browser-sync": "^2.17.5",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
