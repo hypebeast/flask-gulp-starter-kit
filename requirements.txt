@@ -1,0 +1,3 @@
+# Some Paas's (e.g. Heroku) require a requirements file in the project root
+# Install the production requirements
+-r requirements/prod.txt

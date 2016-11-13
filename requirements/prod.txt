@@ -1,0 +1,24 @@
+# Everything needed in production
+
+# Flask
+Flask
+
+# Database
+Flask-SQLAlchemy
+SQLAlchemy
+
+# Migrations
+Flask-Migrate
+
+# Forms
+Flask-WTF
+WTForms
+
+# Deployment
+gunicorn
+
+# Caching
+Flask-Cache
+
+# Debug toolbar
+Flask-DebugToolbar

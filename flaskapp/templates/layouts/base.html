@@ -1,0 +1,46 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>
+      {% block page_title %}flaskapp{% endblock %}
+    </title>
+    <meta name="description" content="{% block meta_description %}{% endblock %}">
+    <meta name="author" content="{% block meta_author %}Sebastian Ruml{% endblock %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="./static/build/app.min.css">
+    
+    {% block css %}{% endblock %}
+
+    <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
+  </head>
+
+  <body class="{% block body_class %}{% endblock %}">
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    {% block body %}
+
+    <div class="{% block content_class %}content{% endblock content_class %}">
+
+      {% block content %}{% endblock %}
+
+    </div><!-- end container -->
+
+    <!-- JavaScript at the bottom for fast page loading -->
+
+    <!-- Custom Javascript -->
+    {% block js %}{% endblock %}
+
+    <!-- Google Analytics -->
+    {% include "includes/ga.html" %}
+
+    {% endblock %} <!-- end block body -->
+  </body>
+</html>
