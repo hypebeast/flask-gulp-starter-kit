@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Application configuration."""
-import os
 import logging
+import os
 
 
 class Config(object):

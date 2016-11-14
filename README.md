@@ -2,6 +2,8 @@
 
 Minimal boilerplate/starter project for Flask 0.11 with Gulp for managing frontend assets.
 
+[![Build Status](https://travis-ci.org/hypebeast/flask-gulp-minimal-boilerplate.svg?branch=master)](https://travis-ci.org/hypebeast/flask-gulp-minimal-boilerplate)
+
 ![screenshot](./screenshot.png)
 
 
@@ -133,6 +135,12 @@ $ flask test
 ## Deployment
 
 Make sure that the `FLASK_DEBUG` environment variable is unset or set it to `0`, so that `ProdConfig` is used.
+
+
+## TODOs
+
+  * Add `fabfile.py` to interact with Heroku
+  * Add `Dockerfile` and `docker-compose`  
 
 
 ## Credits

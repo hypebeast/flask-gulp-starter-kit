@@ -2,10 +2,9 @@
 """Defines fixtures available to all tests."""
 
 import pytest
-from webtest import TestApp
-
 from flaskapp.app import app_factory
 from flaskapp.settings import TestConfig
+from webtest import TestApp
 
 
 @pytest.yield_fixture(scope='function')

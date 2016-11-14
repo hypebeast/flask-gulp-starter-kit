@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 """The app module, containing the app factory function."""
-import sys
 import logging
-from flask import Flask, render_template
+import sys
 
-from flaskapp.home import blueprint as home
-from flaskapp.extensions import cache, csrf_protect, db, debug_toolbar, migrate
-from flaskapp.settings import ProdConfig
+from flask import Flask, render_template
 from flaskapp import commands
+from flaskapp.extensions import cache, csrf_protect, db, debug_toolbar, migrate
+from flaskapp.home import blueprint as home
+from flaskapp.settings import ProdConfig
 
 DEFAULT_BLUEPRINTS = (
     home,
