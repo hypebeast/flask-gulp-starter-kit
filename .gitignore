@@ -4,3 +4,5 @@ node_modules/
 flaskapp/static/dist
 flaskapp/static/components/*
 !flaskapp/static/components/.gitkeep
+diff
+.cache
