@@ -9,6 +9,9 @@ python:
   - 3.4
   - 3.5
 
+env:
+  - FLASK_APP=app.py
+
 install:
   - pip install -r requirements/dev.txt
 

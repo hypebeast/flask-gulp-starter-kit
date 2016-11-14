@@ -36,6 +36,7 @@ def app_factory(config_object=ProdConfig, blueprints=DEFAULT_BLUEPRINTS):
 
 
 def configure_app(app, config):
+    """Configure app."""
     app.config.from_object(config)
 
 
@@ -92,7 +93,7 @@ def register_shellcontext(app):
     """Register shell context objects."""
     def shell_context():
         """Shell context objects."""
-        return { 'db': db }
+        return {'db': db}
 
     app.shell_context_processor(shell_context)
 
