@@ -2,6 +2,8 @@
 
 Minimal boilerplate/starter project for Flask 0.11 with Gulp for managing frontend assets.
 
+![screenshot](./screenshot.png)
+
 
 ## Features
 
