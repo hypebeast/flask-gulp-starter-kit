@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 """The app module, containing the app factory function."""
+from __future__ import print_function  # (at top of module)
+
 import logging
 import sys
 
@@ -86,7 +88,7 @@ def register_hooks(app):
     """Configure hook."""
     @app.before_request
     def before_request():
-        print 'Before request hook'
+        print('Before request hook')
 
 
 def register_shellcontext(app):
