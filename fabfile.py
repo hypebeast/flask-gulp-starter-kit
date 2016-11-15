@@ -1,11 +1,12 @@
+"""Fabfile for deploying the app on Heroku."""
 from __future__ import print_function
+
 import os
 import random
 import string
 
-from fabric.api import local, require, env
+from fabric.api import env, local, require
 from fabric.colors import cyan
-
 
 current_dir = os.getcwd()
 env.project_name = 'flaskgulpboilerplate'
@@ -18,11 +19,12 @@ env.environments = ['ci', 'stage', 'prod']
 #######################################
 
 def info(message):
+    """Print info message."""
     print(cyan(message))
 
 
 def create_secret_key():
-    """Creates a random string of letters and numbers."""
+    """Create a random string of letters and numbers."""
     return ''.join(random.choice(string.ascii_letters + string.digits) for i in range(30))
 
 
@@ -83,9 +85,9 @@ def heroku_create_app():
 
 
 def heroku_configure_app():
-    """Configure a app with a basic configuration"""
-    require("environment")
-    require("project_name")
+    """Configure an app with a basic configuration."""
+    require('environment')
+    require('project_name')
 
     info('Configure app: {}'.format(env.app_name))
 
@@ -106,6 +108,7 @@ def set_remotes():
 
 
 def push():
+    """Push to Heroku remote."""
     require('environment')
     require('branch')
 
@@ -115,30 +118,35 @@ def push():
 
 
 def open():
+    """Open app."""
     require('environment')
     local('heroku open --remote {}'.format(env.environment))
 
+
 def logs():
+    """Show logs."""
     require('environment')
     local('heroku logs -t --remote {}'.format(env.environment))
 
+
 def init():
+    """Bootstrap Heroku apps."""
     heroku_bootstrap()
 
 
 def ci():
-    """fab ci [command]."""
+    """Run fab ci [command]."""
     env.environment = 'ci'
     env.branch = 'master'
 
 
 def stage():
-    """fab stage [command]."""
+    """Run fab stage [command]."""
     env.environment = 'stage'
     env.branch = 'master'
 
 
 def prod():
-    """fab prod [command]."""
+    """Run fab prod [command]."""
     env.environment = 'prod'
     env.branch = 'master'
