@@ -129,7 +129,7 @@ def init():
 def ci():
     """fab ci [command]."""
     env.environment = 'ci'
-    env.branch = 'feature-fabric'
+    env.branch = 'master'
 
 
 def stage():
