@@ -6,6 +6,8 @@ Minimal boilerplate/starter project for Flask 0.11 with Gulp for managing fronte
 
 ![screenshot](./screenshot.png)
 
+[Demo](https://flaskgulpboilerplate-prod.herokuapp.com/about/)
+
 
 ## Features
 
