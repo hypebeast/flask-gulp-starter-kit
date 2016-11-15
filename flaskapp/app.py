@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """The app module, containing the app factory function."""
-from __future__ import print_function  # (at top of module)
+from __future__ import print_function
 
 import logging
 import sys
