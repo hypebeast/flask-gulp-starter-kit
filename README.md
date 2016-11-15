@@ -132,6 +132,27 @@ $ flask test
 ```
 
 
+## Database Migrations
+
+First, initialize the database:
+
+```
+$ flask db init
+```
+
+Run the inital migration:
+
+```
+$ flask db migrate
+```
+
+Apply the migrations:
+
+```
+$ flask db upgrade
+```
+
+
 ## Deployment
 
 Make sure that the `FLASK_DEBUG` environment variable is unset or set it to `0`, so that `ProdConfig` is used.

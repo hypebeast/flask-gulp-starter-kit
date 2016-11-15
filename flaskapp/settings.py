@@ -24,7 +24,7 @@ class ProdConfig(Config):
 
     ENV = 'prod'
     DEBUG = False
-    SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/example'  # TODO: Change me
+    SQLALCHEMY_DATABASE_URI = os.environment.get('DATABASE_URL', 'postgresql://localhost/example')
     DEBUG_TB_ENABLED = False  # Disable Debug toolbar
     LOG_LEVEL = logging.WARN
 
