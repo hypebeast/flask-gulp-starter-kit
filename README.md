@@ -162,8 +162,10 @@ Make sure that the `FLASK_DEBUG` environment variable is unset or set it to `0`,
 
 ## TODOs
 
-  * Add `fabfile.py` to interact with Heroku
-  * Add `Dockerfile` and `docker-compose`  
+  * [x] Add `fabfile.py` to setup a Heroku app and run it on Heroku
+  * [] Add `Dockerfile` and `docker-compose`  
+  * [] Better database support: base models, migration, sample usage, etc.
+  * [] User management?
 
 
 ## Credits
