@@ -117,12 +117,12 @@ Run `flask` to see all available commands.
 
 The frontend workflow is based on [Gulp](http://gulpjs.com/). It handles Javascript files (minification, concatination), SASS files (compile to CSS) and images. Furthermore, BrowserSync provides live-reloading of the web page on changes.
 
-The following Gulp tasks are available:
+Important Gulp tasks:
 
-  * **default**: Build all files, starts the Flask server, runs BrowserSync and watches for file changes.
+  * **default**: Build all files, start the Flask server, run BrowserSync and watch for file changes.
   * **build**: Build all files
   * **build:watch**: Build and watch for file changes
-  * **dev**: Build, watch for file changes and start BrowserSync
+  * **dev**: Build and watch for file changes and start BrowserSync
 
 
 ## Tests
@@ -142,7 +142,7 @@ First, initialize the database:
 $ flask db init
 ```
 
-Run the inital migration:
+Run the initial migration:
 
 ```
 $ flask db migrate
@@ -163,9 +163,11 @@ Make sure that the `FLASK_DEBUG` environment variable is unset or set it to `0`,
 ## TODOs
 
   * [x] Add `fabfile.py` to setup a Heroku app and run it on Heroku
-  * [] Add `Dockerfile` and `docker-compose`  
-  * [] Better database support: base models, migration, sample usage, etc.
-  * [] User management?
+  * [ ] Add `Dockerfile` and `docker-compose`  
+  * [ ] Better database support: base models, migration, sample usage, etc.
+  * [ ] Unprocessed assets for dev mode
+  * [ ] `https://github.com/vanjacosic/gulp-asset-manifest` to support hashed filenames
+  * [ ] User management?
 
 
 ## Credits
